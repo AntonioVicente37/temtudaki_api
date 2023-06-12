@@ -4,6 +4,11 @@ module.exports = {
     project: 'tsconfig.json',
     tsconfigRootDir: __dirname,
     sourceType: 'module',
+    root: true,
+    extends: '@react-native-community',
+    rules: {
+      'prettier/prettier': 0,
+    },
   },
   plugins: ['@typescript-eslint/eslint-plugin'],
   extends: [
