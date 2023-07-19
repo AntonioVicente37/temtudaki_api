@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
@@ -14,4 +15,5 @@ export class Usuario {
 
   @Column({ length: 255 })
   password: string;
+  
 }

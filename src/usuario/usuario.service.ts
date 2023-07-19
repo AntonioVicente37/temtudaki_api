@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 
 import { Injectable, Inject } from '@nestjs/common';
 import { Repository } from 'typeorm';
@@ -17,11 +18,13 @@ export class UsuarioService {
   }
 
   async cadastrar(data: UsuarioCadastrarDto): Promise<ResultadoDto>{
-    let usuario = new Usuario()
-    usuario.email = data.email
+    const usuario = new Usuario()
+   /*  usuario.email = data.email
     usuario.nome = data.nome
-    usuario.password = data.senha
-    return this.usuarioRepository.save(usuario)
+    usuario.password = data.senha 
+    usuario.cpf = data.cpf;
+    */
+    return this.usuarioRepository.save(data)
     .then((result) =>{
       return <ResultadoDto>{
         status: true,
